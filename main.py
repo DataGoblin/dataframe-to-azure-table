@@ -11,7 +11,7 @@ table_name = 'TestTable'
 df = pd.read_parquet('test.parquet').drop_duplicates()
 
 # creating the partition and row keys.
-# Partition key can be all the same value or even a blank string
+# Partition key can only be one value when performing batch operations
 # RowKey needs to be unique.
 df.insert(0, 'PartitionKey', 'MyPartition')
 df.insert(1, 'RowKey', df.index)
