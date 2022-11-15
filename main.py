@@ -1,6 +1,5 @@
 import pandas as pd
 import math
-from time import sleep
 from azure.data.tables import TableClient, TableTransactionError
 from azure.core.exceptions import ResourceExistsError
 
